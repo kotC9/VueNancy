@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VueNancy.Backend", "VueNancy.Backend\VueNancy.Backend.csproj", "{D0413F1A-3C28-4981-9537-592839588583}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "VueNancy.FrontEnd", "VueNancy.FrontEnd\VueNancy.Frontend.njsproj", "{CCAE6075-2E11-48F7-9FB4-8A52484E9B95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0413F1A-3C28-4981-9537-592839588583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0413F1A-3C28-4981-9537-592839588583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0413F1A-3C28-4981-9537-592839588583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0413F1A-3C28-4981-9537-592839588583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCAE6075-2E11-48F7-9FB4-8A52484E9B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCAE6075-2E11-48F7-9FB4-8A52484E9B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCAE6075-2E11-48F7-9FB4-8A52484E9B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCAE6075-2E11-48F7-9FB4-8A52484E9B95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {304364B7-1E18-4CCB-B51F-E285746DF663}
+	EndGlobalSection
+EndGlobal
