@@ -14,7 +14,7 @@ namespace VueNancy.Backend.Database
         /// <returns> true - if account exists, else false</returns>
         public static bool AccountExists(string login, string password, ref User authUser)
         {
-            using var db = new LiteDatabase(@"MyData.db");
+            using var db = new LiteDatabase(@"Users.db");
 
             var users = db.GetCollection<User>("users");
             var result = users.FindOne(Query.And(

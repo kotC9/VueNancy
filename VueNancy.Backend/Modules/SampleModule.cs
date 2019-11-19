@@ -21,9 +21,9 @@ namespace VueNancy.Backend.Modules
                 Console.WriteLine($"login: {user.Login}");
                 Console.WriteLine($"pass: {user.Password}");
 
-                return !DatabaseCommands.AccountExists(user.Login, user.Password, ref user)
-                    ? Response.AsJson(new { success = false })
-                    : Response.AsJson(new { success = true });
+                return DatabaseCommands.AccountExists(user.Login, user.Password, ref user)
+                    ? Response.AsJson(new { success = true })
+                    : Response.AsJson(new { success = false });
             });
         }
     }
