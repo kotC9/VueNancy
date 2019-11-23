@@ -53,7 +53,7 @@ export default {
 
 On NancyFx (Backend part):
 ```csharp
-Post("/login", args =>
+Post("/send-ping", args =>
 {
   //Bind request data to class Ping
   var model = this.Bind<Ping>();
