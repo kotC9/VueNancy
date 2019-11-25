@@ -15,15 +15,19 @@ namespace VueNancy.Backend.Modules
             Post("/login", args =>
             {
                 var user = this.Bind<User>();
-                var authKey = "0";
 
-                Console.WriteLine($"\nlogin attempt:");
-                Console.WriteLine($"login: {user.Login}");
-                Console.WriteLine($"pass: {user.Password}");
-
-                return DatabaseCommands.AccountExists(user.Login, user.Password, ref user)
+                return DatabaseCommands.AccountExists(user.Login, user.Password)
                     ? Response.AsJson(new { success = true })
                     : Response.AsJson(new { success = false });
+            });
+
+            Post("/add_login", args =>
+            {
+                var user = this.Bind<User>();
+
+                DatabaseCommands.AddCustomDataToDatabase(user.Login, user.Password);
+
+                return 0;
             });
         }
     }

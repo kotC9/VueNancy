@@ -15,7 +15,7 @@
                 </div>
 
                 <div class='form-group'>
-                    <d-button pill theme='primary' @click='postLogin()'>Войти</d-button>
+                    <d-button pill theme='primary' @click='postLogin()'>Login</d-button>
                 </div>
             </d-col>
             <d-col cols='12' md='4' lg='3'></d-col>
