@@ -13,7 +13,7 @@ Because Asp.net framework contains huge functionality that is not used in simple
 NancyFX implements REST Api, and this is enough
 
 ## Using
-Let's write a simple application. The user sends a POST request with the text 'ping', and receives a 'pong' in response.
+Let's write a simple application. The user sends a `POST` request with the text 'ping', and receives a 'pong' in response.
 
 Vue.js (Frontend part)
 ```js
@@ -35,7 +35,7 @@ export default {
   methods: {
     sendPing(e) {
       HTTP
-        .post('send-ping', {
+        .post('/send-ping', {
           ping: 'ping'
         })
         .then(response => {
