@@ -9,7 +9,7 @@ VueNancy is a solution for Visual studio, showing how you can create small web a
 Well, [Vue.js](https://github.com/vuejs/vue) was chosen from personal preference, but you can use, for example, React, because there is also an axios library.
   
 ## Why was NancyFX chosen, not Asp.net?
-Because Asp.net framework contains huge functionality that is not used in simple web applications and sites.
+Asp.net framework contains huge functionality that is not used in simple web applications and sites.
 NancyFX implements REST Api, and this is enough
 
 ## Using
