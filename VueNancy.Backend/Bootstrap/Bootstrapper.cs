@@ -16,8 +16,8 @@ namespace VueNancy.Backend.Bootstrap
             pipelines.AfterRequest.AddItemToEndOfPipeline(x =>
             {
                 x.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-                x.Response.Headers.Add("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT,OPTIONS");
-                x.Response.Headers.Add("Access-Control-Allow-Headers", "Accept, Origin, Authorization, Content-type, cache-control, x-requested-with");
+                x.Response.Headers.Add("Access-Control-Allow-Methods", "POST,GET");
+                x.Response.Headers.Add("Access-Control-Allow-Headers", "Content-type");
             });
         }
     }

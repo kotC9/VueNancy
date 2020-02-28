@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Nancy;
 using Nancy.ModelBinding;
 using VueNancy.Backend.Database;
@@ -12,8 +14,14 @@ namespace VueNancy.Backend.Modules
     {
         public SampleModule()
         {
+            AddRoutes();
+        }
+
+        private void AddRoutes()
+        {
             Post("/login", args =>
             {
+                //model binding
                 var user = this.Bind<User>();
 
                 return DatabaseCommands.AccountExists(user.Login, user.Password)
@@ -27,7 +35,7 @@ namespace VueNancy.Backend.Modules
 
                 DatabaseCommands.AddCustomDataToDatabase(user.Login, user.Password);
 
-                return 0;
+                return HttpStatusCode.OK;
             });
         }
     }

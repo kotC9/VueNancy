@@ -9,6 +9,9 @@ namespace VueNancy.Backend.Database
 {
     public class DatabaseCommands
     {
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="login"> auth login</param>
         /// <param name="password">auth password</param>
         /// <returns> true - if account exists, else false</returns>
@@ -26,6 +29,11 @@ namespace VueNancy.Backend.Database
             return result != null;
         }
 
+        /// <summary>
+        /// method of adding a user to the database
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
         public static void AddCustomDataToDatabase(string login, string password)
         {
             using var db = new LiteDatabase(@"Users.db");
