@@ -44,9 +44,11 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\directives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="babel.config.js" />
+    <Content Include="src\directives\http-common.js" />
     <Content Include="src\main.js" />
   </ItemGroup>
   <PropertyGroup>

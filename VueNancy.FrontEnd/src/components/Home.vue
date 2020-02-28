@@ -18,11 +18,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
-
-    export const HTTP = axios.create({
-        baseURL: 'http://127.0.0.1:8081/api'
-    })
+    import { post } from '../directives/http-common';
 
     export default {
         data() {
@@ -33,11 +29,10 @@
         },
         methods: {
             postLogin() {
-                HTTP
-                    .post('login', {
-                        login: this.inputLogin,
-                        password: this.inputPassword
-                    })
+                post('login', {
+                    login: this.inputLogin,
+                    password: this.inputPassword
+                })
                     .then(response => {
                         if (response.data.success) {
                             alert('success');
