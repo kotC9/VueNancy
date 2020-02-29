@@ -26,16 +26,11 @@ Vue.js (Frontend part)
 <script>
 import axios from 'axios';
 
-export const HTTP = axios.create({
-  //on port 8081 launched nancyfx
-  baseURL: 'http://127.0.0.1:8081/api'
-})
-
 export default {
   methods: {
     sendPing(e) {
-      HTTP
-        .post('/send-ping', {
+      axios
+        .post('http://127.0.0.1:8081/api/send-ping', {
           ping: 'ping'
         })
         .then(response => {
