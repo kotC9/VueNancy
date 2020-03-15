@@ -5,7 +5,6 @@
 
                 <d-input id="Login" class="mb-2 mr-sm-2 mb-sm-0" v-model="inputLogin" placeholder="Login" required />
             </div>
-
             <div class='form-group'>
                 <d-form-input id="PasswordInput" type="password" v-model="inputPassword" required placeholder="Password"></d-form-input>
             </div>
@@ -33,16 +32,16 @@
                     login: this.inputLogin,
                     password: this.inputPassword
                 })
-                    .then(response => {
-                        if (response.data.success) {
-                            alert('success');
-                        } else {
-                            alert('login or password wrong');
-                        }
-                    })
-                    .catch(error => {
-                        alert(error);
-                    });
+                .then(response => {
+                    if (response.data.success) {
+                        alert('success');
+                    } else {
+                        alert('login or password wrong.');
+                    }
+                })
+                .catch(error => {
+                    alert(error);
+                });
             }
         }
     };

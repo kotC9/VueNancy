@@ -8,7 +8,6 @@ namespace VueNancy.Backend.Bootstrap
         static void Main(string[] args)
         {
             var bindUrl = new Uri("http://localhost:8081");
-            var bootstrapper = new Bootstrapper();
             var configuration = new HostConfiguration()
             {
                 UrlReservations =
@@ -17,7 +16,7 @@ namespace VueNancy.Backend.Bootstrap
                 }
             };
 
-            using var host = new NancyHost(bootstrapper, configuration, bindUrl);
+            using var host = new NancyHost(new Bootstrapper(), configuration, bindUrl);
             host.Start();
 
             Console.WriteLine("NancyFX Stand alone test application.");
